@@ -181,7 +181,7 @@ module.exports = function (_config) {
           monochromeImage: './assets/icon-android-monochrome.png',
           backgroundColor: '#006AFF',
         },
-        googleServicesFile: './google-services.json',
+        // googleServicesFile: './google-services.json',
         package: 'xyz.blueskyweb.app',
         intentFilters: [
           {

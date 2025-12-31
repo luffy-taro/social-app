@@ -26,7 +26,7 @@ module.exports = function (_config) {
     ...(IS_DEV || IS_TESTFLIGHT ? [] : []),
   ]
 
-  const UPDATES_ENABLED = IS_TESTFLIGHT || IS_PRODUCTION
+  // const UPDATES_ENABLED = IS_TESTFLIGHT || IS_PRODUCTION
 
   const USE_SENTRY = Boolean(process.env.SENTRY_AUTH_TOKEN)
 
@@ -36,10 +36,10 @@ module.exports = function (_config) {
       name: 'Bluesky',
       slug: 'bluesky',
       scheme: 'bluesky',
-      owner: 'blueskysocial',
-      runtimeVersion: {
-        policy: 'appVersion',
-      },
+      owner: 'rishikesh_expo',
+      // runtimeVersion: {
+      //   policy: 'appVersion',
+      // },
       icon: './assets/app-icons/ios_icon_default_next.png',
       userInterfaceStyle: 'automatic',
       primaryColor: '#1083fe',
@@ -204,21 +204,21 @@ module.exports = function (_config) {
       web: {
         favicon: './assets/favicon.png',
       },
-      updates: {
-        url: 'https://updates.bsky.app/manifest',
-        enabled: UPDATES_ENABLED,
-        fallbackToCacheTimeout: 30000,
-        codeSigningCertificate: UPDATES_ENABLED
-          ? './code-signing/certificate.pem'
-          : undefined,
-        codeSigningMetadata: UPDATES_ENABLED
-          ? {
-              keyid: 'main',
-              alg: 'rsa-v1_5-sha256',
-            }
-          : undefined,
-        checkAutomatically: 'NEVER',
-      },
+      // updates: {
+      //   url: 'https://updates.bsky.app/manifest',
+      //   enabled: false,
+      //   fallbackToCacheTimeout: 30000,
+      //   codeSigningCertificate: false
+      //     ? './code-signing/certificate.pem'
+      //     : undefined,
+      //   codeSigningMetadata: false
+      //     ? {
+      //         keyid: 'main',
+      //         alg: 'rsa-v1_5-sha256',
+      //       }
+      //     : undefined,
+      //   checkAutomatically: 'NEVER',
+      // },
       plugins: [
         'expo-video',
         'expo-localization',
@@ -429,7 +429,7 @@ module.exports = function (_config) {
               },
             },
           },
-          projectId: '55bd077a-d905-4184-9c7f-94789ba0f302',
+          projectId: '33e7615a-4405-4100-a1d7-9c6a9b9e8a53',
         },
       },
     },
